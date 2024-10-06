@@ -1,0 +1,25 @@
+all: hw
+	./hw 10 5 1
+
+hw: hw.o FancyBox.o HollowBox.o FilledBox.o Box.o
+	g++ -std=c++17 -Wall -Wextra hw.o FancyBox.o HollowBox.o FilledBox.o Box.o -o hw
+
+hw.o: hw.cpp FancyBox.h HollowBox.h FilledBox.h Box.h
+	g++ -std=c++17 -Wall -Wextra -c hw.cpp 
+
+FancyBox.o: FancyBox.cpp FancyBox.h Box.h
+	g++ -std=c++17 -Wall -Wextra -c FancyBox.cpp
+
+FilledBox.o: FilledBox.cpp HollowBox.h Box.h
+	g++ -std=c++17 -Wall -Wextra -c FilledBox.cpp
+
+HollowBox.o: HollowBox.cpp HollowBox.h Box.h
+	g++ -std=c++17 -Wall -Wextra -c HollowBox.cpp
+
+Box.o: Box.cpp Box.h
+	g++ -std=c++17 -Wall -Wextra -c Box.cpp
+
+clean:
+	rm -f hw *.o
+
+.PHONY: clean
