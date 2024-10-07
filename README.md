@@ -7,7 +7,7 @@ These series of classes will create a string of characters that can be printed a
 ![UML class](https://github.com/user-attachments/assets/e3e693b5-d9d3-4f8c-8fad-c9cfcb0b7b9d)
 
 
-`Box` has a constructor that takes two parameters, `int width` and `int height`, which all the other classes inherit. `HollowBox` also takes an additional parameter, `char border`, that `FilledBox` inherits from it, which it will use to draw the box. 
+`Box` has a constructor that takes two parameters, `int width` and `int height`, which all the other classes inherit. `HollowBox` also takes an additional parameter, `char border`, that `FilledBox` inherits from it, which it will use to draw the box. The `asString()` method is used to generate the box as a string.
 
 
 
