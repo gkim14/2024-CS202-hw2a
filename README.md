@@ -4,7 +4,7 @@ These series of classes will create a string of characters that can be printed a
 
 ## Class Structure
 
-![UML class](https://github.com/user-attachments/assets/81be6908-907d-4c1f-8609-47c3832c0209)
+![UML class](https://github.com/user-attachments/assets/e3e693b5-d9d3-4f8c-8fad-c9cfcb0b7b9d)
 
 
 `Box` has a constructor that takes two parameters, `int width` and `int height`, which all the other classes inherit. `HollowBox` also takes an additional parameter, `char border`, that `FilledBox` inherits from it, which it will use to draw the box. 
